@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="700.0" pickOnBounds="true">
+         <image>
+            <Image url="@../imgs/background.jpg" />
+         </image>
+      </ImageView>
+      <HBox maxHeight="200.0" maxWidth="200.0" prefHeight="500.0" prefWidth="700.0" spacing="20.0">
+         <children>
+            <AnchorPane fx:id="pane" maxHeight="200.0" maxWidth="200.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="NEVER">
+               <children>
+                  <ImageView fx:id="board" fitHeight="460.0" fitWidth="440.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../imgs/Go_board.png" />
+                     </image>
+                  </ImageView>
+                  <Canvas fx:id="guideLine" height="460.0" width="440.0" />
+                  <ImageView fx:id="black2" fitHeight="20.0" fitWidth="20.0" layoutX="210.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/Go_black.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="white2" fitHeight="20.0" fitWidth="20.0" layoutX="138.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/Go_white.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="black3" fitHeight="20.0" fitWidth="20.0" layoutX="138.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/Go_black.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="black1" fitHeight="20.0" fitWidth="20.0" layoutX="279.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/Go_black.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="white1" fitHeight="20.0" fitWidth="20.0" layoutX="210.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/Go_white.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="white3" fitHeight="20.0" fitWidth="20.0" layoutX="279.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/Go_white.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <VBox alignment="CENTER" prefHeight="460.0" prefWidth="249.0" spacing="10.0">
+               <children>
+                  <ImageView fx:id="profile_img" fitHeight="188.0" fitWidth="200.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../imgs/profileImg.jpg" />
+                     </image>
+                  </ImageView>
+                  <TextArea fx:id="roomChatArea" disable="true" prefHeight="200.0" prefWidth="200.0" promptText="채팅창" style="-fx-opacity: 1; -fx-background-color: white;" />
+                  <HBox prefHeight="29.0" prefWidth="201.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="roomChat" promptText="메세지 입력" />
+                        <Button fx:id="roomSend" mnemonicParsing="false" text="Send" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="exitBtn" mnemonicParsing="false" text="나가기" />
+               </children></VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
